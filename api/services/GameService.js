@@ -7,6 +7,11 @@ class GameService
         this.gameRepository = require("../repositories")(db).gameRepository;
     }
 
+    async getGames()
+    {
+        return await this.gameRepository.getGames();
+    }
+
     async createGame(game)
     {
         return await this.gameRepository.createGame(game);
