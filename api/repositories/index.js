@@ -1,8 +1,11 @@
+const GameRepository = require("./GameRepository");
 const UserRepository = require("./UserRepository");
 
 module.exports = (db) =>
 {
-    const userRepository = new UserRepository(db);
+    const userRepository = new UserRepository(db); 
 
-    return { userRepository };
+    const gameRepository = new GameRepository(db)
+
+    return { userRepository, gameRepository };
 }
