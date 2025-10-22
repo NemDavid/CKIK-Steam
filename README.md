@@ -1,2 +1,4 @@
 PORT = 3000
 NODE_ENV = dev
+DB_NAME = kg_steam
+DB_HOST = localhost
