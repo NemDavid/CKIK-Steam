@@ -49,6 +49,22 @@ module.exports = (sequelize) =>
                 set(value)
                 {
                     this.setDataValue("password", authUtils.hashPassword(value));
+                },
+                validate:{
+                    len:{
+                        args: [8,Infinity],
+                        msg: "Password must be at least 8 characters long",
+                    },
+                    Alphanumeric(value){
+                        let bool = true;
+                        for(let i = 0; i < value.length; i++){
+                            const char = value[i];
+                            if(!((char >= '0' && char <= '9') || (char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z'))){
+                                bool = false;
+                            }
+                        }
+                        return bool;
+                    }
                 }
             },
 
