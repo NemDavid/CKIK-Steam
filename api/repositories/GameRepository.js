@@ -1,7 +1,5 @@
 const { DbError } = require("../errors");
 
-const { Op } = require("sequelize");
-
 class GameRepository
 {
     constructor(db)
