@@ -6,7 +6,7 @@
 
 Users <> Games = N:M
 Achievements <> Games = 1:N
-Workshop <> Games = 1:1
+Workshop <> Games = 1:N
 Users <> Workshop = 1:N
 */
 
